@@ -10,6 +10,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/yageek/StickyHeader"
   s.license      = "MIT"
   s.author             = { "Yannick Heinrich" => "yannick.heinrich@gmail.com" }
-  s.source       = { :git => "http://github.com/yageek//StickyHeader.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/yageek/StickyHeader.git", :tag => "#{s.version}" }
   s.source_files  = "StickyHeader"
+  s.platform = :ios
+  s.ios.deployment_target = '8.0'
 end

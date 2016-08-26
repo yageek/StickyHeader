@@ -1,8 +1,8 @@
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TPGSwift.svg)](https://img.shields.io/cocoapods/v/StickyHeader.svg)
-[![Platform](https://img.shields.io/cocoapods/p/TPGSwift.svg?style=flat)](http://cocoadocs.org/docsets/StickyHeader)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/StickyHeader.svg)](https://img.shields.io/cocoapods/v/StickyHeader.svg)
+[![Platform](https://img.shields.io/cocoapods/p/StickyHeader.svg?style=flat)](http://cocoadocs.org/docsets/StickyHeader)
 
 # StickyHeader
 
