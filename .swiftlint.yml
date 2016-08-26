@@ -1,0 +1,7 @@
+included:
+- StickyHeader
+disabled_rules:
+- line_length
+- variable_name
+opt_in_rules:
+- empty_count
