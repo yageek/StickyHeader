@@ -19,6 +19,7 @@ class ViewControllerTwo: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableHeaderView = nil
         self.tableView.stickyHeader.view = self.headerView
         self.tableView.stickyHeader.height = 200
         self.tableView.stickyHeader.minimumHeight = 100

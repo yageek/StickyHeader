@@ -37,10 +37,7 @@ public class StickyHeader: NSObject {
             if _scrollView != newValue {
                 _scrollView = newValue
 
-                if let scrollView = scrollView where scrollView.isKindOfClass(UITableView.self) {
-                    self.setTableHeaderViewFrame(CGRect(x: 0, y: 0, width: CGRectGetWidth(scrollView.frame), height: self.height))
-                    self.adjustScrollViewTopInset(self.minimumHeight)
-                } else if let scrollView = scrollView {
+               if let scrollView = scrollView {
                     self.adjustScrollViewTopInset(scrollView.contentInset.top + self.height)
                     scrollView.addSubview(self.contentView)
                 }
@@ -76,14 +73,7 @@ public class StickyHeader: NSObject {
         set {
             guard newValue != _height else { return }
 
-            if let scrollView = self.scrollView where scrollView.isKindOfClass(UITableView.self) {
-
-                let rect = CGRect(x: 0, y: 0, width: CGRectGetWidth(scrollView.frame), height: newValue)
-
-                self.setTableHeaderViewFrame(rect)
-                self.adjustScrollViewTopInset(min(self.minimumHeight, newValue))
-
-            } else if let scrollView = self.scrollView {
+            if let scrollView = self.scrollView {
                 self.adjustScrollViewTopInset(scrollView.contentInset.top - height + newValue)
             }
 
@@ -103,11 +93,6 @@ public class StickyHeader: NSObject {
         get { return _minimumHeight }
         set {
             _minimumHeight = newValue
-
-            if let scrollView = self.scrollView where scrollView.isKindOfClass(UITableView.self) {
-                self.adjustScrollViewTopInset(min(newValue, self.height))
-            }
-
             layoutContentView()
         }
     }
@@ -128,19 +113,6 @@ public class StickyHeader: NSObject {
 
         self.scrollView = scrollView
     }
-
-    private func setTableHeaderViewFrame(frame: CGRect) {
-
-        let headerView = StickyHeaderView(frame: frame)
-        headerView.parent = self
-
-        headerView.addSubview(self.contentView)
-        // swiftlint:disable force_cast
-        (self.scrollView as! UITableView).tableHeaderView = headerView
-        // swiftlint:enable force_cast
-        headerView.setNeedsLayout()
-    }
-
     private func updateConstraints() {
         guard let view = self.view else { return }
 
@@ -162,17 +134,8 @@ public class StickyHeader: NSObject {
 
         guard let scrollView = self.scrollView else { return }
 
-        print("Collection offset: \(scrollView.contentOffset)")
-        print("Header height: \(self.height)")
-        print("Header height: \(self.minimumHeight)")
-
-        if scrollView.isKindOfClass(UITableView.self) {
-            
-        }
-
         if scrollView.contentOffset.y < -self.minimumHeight {
             relativeYOffset = -self.height
-
         } else {
 
             let compensation: CGFloat = -self.minimumHeight - scrollView.contentOffset.y
@@ -180,6 +143,7 @@ public class StickyHeader: NSObject {
         }
 
         let frame = CGRect(x: 0, y: relativeYOffset, width: scrollView.frame.size.width, height: height)
+
         self.contentView.frame = frame
     }
 
