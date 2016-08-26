@@ -45,4 +45,4 @@ self.tableView.stickyHeader.minimumHeight = 100
 
 ## License
 
-TPGSwift is released under the MIT license. See LICENSE for details.
+StickyHeader is released under the MIT license. See LICENSE for details.
