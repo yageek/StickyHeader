@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StickyHeader"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "Library helping to add a sticky header to an UIScrollView."
   s.description  = <<-DESC
   Library helping to add a sticky header to an UIScrollView.
