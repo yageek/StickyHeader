@@ -10,6 +10,8 @@
 		0B3ABB181D6DF12400479F1D /* StickyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B3ABB171D6DF12400479F1D /* StickyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B3ABB201D6DF14D00479F1D /* StickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3ABB1F1D6DF14D00479F1D /* StickyHeader.swift */; };
 		0B3ABB251D6DF5F700479F1D /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3ABB241D6DF5F700479F1D /* StickyHeaderView.swift */; };
+		0BA68E491DF043F100B9EBB8 /* StickyHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3ABB141D6DF12400479F1D /* StickyHeader.framework */; };
+		0BA68E4A1DF043F100B9EBB8 /* StickyHeader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3ABB141D6DF12400479F1D /* StickyHeader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BBC459E1D703CE300D536AE /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC459D1D703CE300D536AE /* ViewControllerTwo.swift */; };
 		0BD75F541D6F32C300A2E6CD /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD75F531D6F32C300A2E6CD /* UIScrollViewExtension.swift */; };
 		0BD75F721D6F348200A2E6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD75F711D6F348200A2E6CD /* AppDelegate.swift */; };
@@ -17,11 +19,10 @@
 		0BD75F791D6F348200A2E6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD75F781D6F348200A2E6CD /* Assets.xcassets */; };
 		0BD75F7C1D6F348200A2E6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD75F7A1D6F348200A2E6CD /* LaunchScreen.storyboard */; };
 		0BD75F821D6F34CB00A2E6CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD75F811D6F34CB00A2E6CD /* ViewController.swift */; };
-		0BD75F831D6F351200A2E6CD /* StickyHeader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3ABB141D6DF12400479F1D /* StickyHeader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0BD75F841D6F351800A2E6CD /* PBXContainerItemProxy */ = {
+		0BA68E4B1DF043F100B9EBB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B3ABB0B1D6DF12400479F1D /* Project object */;
 			proxyType = 1;
@@ -30,6 +31,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0BA68E4D1DF043F100B9EBB8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0BA68E4A1DF043F100B9EBB8 /* StickyHeader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B3ABB141D6DF12400479F1D /* StickyHeader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StickyHeader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3ABB171D6DF12400479F1D /* StickyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StickyHeader.h; sourceTree = "<group>"; };
@@ -37,7 +52,7 @@
 		0B3ABB1F1D6DF14D00479F1D /* StickyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeader.swift; sourceTree = "<group>"; };
 		0B3ABB211D6DF22E00479F1D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0B3ABB241D6DF5F700479F1D /* StickyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
-		0BA68E4E1DF045C100B9EBB8 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		0BA68E451DF03F5B00B9EBB8 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		0BBC459D1D703CE300D536AE /* ViewControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 		0BD75F531D6F32C300A2E6CD /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		0BD75F6F1D6F348200A2E6CD /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BD75F831D6F351200A2E6CD /* StickyHeader.framework in Frameworks */,
+				0BA68E491DF043F100B9EBB8 /* StickyHeader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +86,7 @@
 		0B3ABB0A1D6DF12400479F1D = {
 			isa = PBXGroup;
 			children = (
-				0BA68E4E1DF045C100B9EBB8 /* .swift-version */,
+				0BA68E451DF03F5B00B9EBB8 /* .swift-version */,
 				0B3ABB211D6DF22E00479F1D /* .swiftlint.yml */,
 				0B3ABB161D6DF12400479F1D /* StickyHeader */,
 				0BD75F701D6F348200A2E6CD /* TestApp */,
@@ -154,11 +169,12 @@
 				0BD75F6B1D6F348200A2E6CD /* Sources */,
 				0BD75F6C1D6F348200A2E6CD /* Frameworks */,
 				0BD75F6D1D6F348200A2E6CD /* Resources */,
+				0BA68E4D1DF043F100B9EBB8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0BD75F851D6F351800A2E6CD /* PBXTargetDependency */,
+				0BA68E4C1DF043F100B9EBB8 /* PBXTargetDependency */,
 			);
 			name = TestApp;
 			productName = TestApp;
@@ -177,9 +193,11 @@
 				TargetAttributes = {
 					0B3ABB131D6DF12400479F1D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5VGYH76875;
 					};
 					0BD75F6E1D6F348200A2E6CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5VGYH76875;
 					};
 				};
 			};
@@ -263,10 +281,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BD75F851D6F351800A2E6CD /* PBXTargetDependency */ = {
+		0BA68E4C1DF043F100B9EBB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B3ABB131D6DF12400479F1D /* StickyHeader */;
-			targetProxy = 0BD75F841D6F351800A2E6CD /* PBXContainerItemProxy */;
+			targetProxy = 0BA68E4B1DF043F100B9EBB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +404,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5VGYH76875;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -396,7 +415,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -405,6 +424,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5VGYH76875;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -414,31 +434,35 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.yageek.StickyHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
 		0BD75F7F1D6F348200A2E6CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5VGYH76875;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.yageek.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		0BD75F801D6F348200A2E6CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5VGYH76875;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.yageek.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

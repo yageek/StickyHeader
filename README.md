@@ -9,6 +9,8 @@
 Simple library based on work done on [MXParallaxHeader](https://github.com/maxep/MXParallaxHeader) helping to 
 create a sticky header for an UIScrollView.
 
+![Demo](TestApp/demo.gif)
+
 ## Installation
 
 ### CocoaPods
@@ -40,9 +42,10 @@ self.tableView.stickyHeader.minimumHeight = 100
 ```
 
 ## Changelog
-
+ - 2.0.0: Swift 3. compatible.
+ - 1.0.1: Swift 2.3 compatible.
  - 1.0.0: First release.
-
+ 
 ## License
 
 StickyHeader is released under the MIT license. See LICENSE for details.

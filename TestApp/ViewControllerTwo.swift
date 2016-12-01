@@ -12,7 +12,7 @@ class ViewControllerTwo: UITableViewController {
     let headerView: UIView = {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 100))
-        view.backgroundColor = UIColor.blueColor()
+        view.backgroundColor = UIColor.blue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -26,13 +26,13 @@ class ViewControllerTwo: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1000
     }
 
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
         return cell
     }
 
