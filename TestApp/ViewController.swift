@@ -15,7 +15,7 @@ class ViewController: UICollectionViewController {
     let headerView: UIView = {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 100))
-        view.backgroundColor = UIColor.blueColor()
+        view.backgroundColor = UIColor.blue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -34,16 +34,15 @@ class ViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1000
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-
-        return collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier:"Cell", for: indexPath)
     }
 }

@@ -38,7 +38,7 @@ public class StickyHeader: NSObject {
                 _scrollView = newValue
 
                if let scrollView = scrollView {
-                    self.adjustScrollViewTopInset(scrollView.contentInset.top + self.height)
+                self.adjustScrollViewTopInset(top: scrollView.contentInset.top + self.height)
                     scrollView.addSubview(self.contentView)
                 }
 
@@ -74,7 +74,7 @@ public class StickyHeader: NSObject {
             guard newValue != _height else { return }
 
             if let scrollView = self.scrollView {
-                self.adjustScrollViewTopInset(scrollView.contentInset.top - height + newValue)
+                self.adjustScrollViewTopInset(top: scrollView.contentInset.top - height + newValue)
             }
 
             _height = newValue
@@ -121,11 +121,11 @@ public class StickyHeader: NSObject {
 
         view.translatesAutoresizingMaskIntoConstraints = false
 
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[v]|", options: [], metrics: nil, views: ["v": view]))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v]|", options: [], metrics: nil, views: ["v": view]))
 
-        self.contentView.addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
+        self.contentView.addConstraint(NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0))
 
-        self.contentView.addConstraint(NSLayoutConstraint(item: view, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: self.height))
+        self.contentView.addConstraint(NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.height))
 
     }
 
@@ -147,11 +147,12 @@ public class StickyHeader: NSObject {
         self.contentView.frame = frame
     }
 
-    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if let path = keyPath where context == &StickyHeaderView.KVOContext && path == "contentOffset" {
+
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let path = keyPath, context == &StickyHeaderView.KVOContext && path == "contentOffset" {
             self.layoutContentView()
         } else {
-            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
 
